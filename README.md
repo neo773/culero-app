@@ -7,7 +7,7 @@ Thanks to the open source community for your contribution. I am absolutely lovin
 
 ## Repositories
 
-- React Native client - https://github.com/eronka/culero-react-native
+- React Native client - https://github.com/eronka/culero-app
 - API - https://github.com/eronka/culero-api
 
 
