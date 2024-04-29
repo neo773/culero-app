@@ -1,7 +1,7 @@
 import { RootState } from "../store/store";
 import { RootStackParamList } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
-import { NavigationContainer, DarkTheme } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
 import { useSelector } from "react-redux";
@@ -36,7 +36,7 @@ const RootNavigator = () => {
 
 const Navigation = () => {
   return (
-    <NavigationContainer linking={LinkingConfiguration} theme={DarkTheme}>
+    <NavigationContainer linking={LinkingConfiguration}>
       <RootNavigator />
     </NavigationContainer>
   );

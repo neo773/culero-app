@@ -4,6 +4,7 @@ import {
 } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
 import { TouchableOpacity, View, Text } from "react-native";
+import InitialScreen from "../screens/InitialScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -61,7 +62,7 @@ function MyTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
 export function BottomNavigator() {
   return (
     <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Home" component={InitialScreen} />
     </Tab.Navigator>
   );
 }
