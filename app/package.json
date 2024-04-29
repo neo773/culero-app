@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/inter": "^0.2.3",
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
@@ -16,6 +17,7 @@
     "@rematch/core": "^2.2.0",
     "@rematch/persist": "^2.1.2",
     "expo": "~50.0.14",
+    "expo-font": "~11.10.3",
     "expo-linking": "^6.2.2",
     "expo-splash-screen": "^0.26.4",
     "expo-status-bar": "~1.11.1",
