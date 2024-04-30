@@ -25,7 +25,7 @@ const button = tv({
 
 type ButtonVariants = VariantProps<typeof button>;
 
-type StyledPressableProps = PressableProps &
+export type StyledPressableProps = PressableProps &
   ButtonVariants & {
     textVariant?: TextVariant;
     textClassName?: TextProps["className"];
