@@ -7,6 +7,8 @@ import {
   SearchBar,
   SortBy,
   HorizontalDivider,
+  SocialMediaConnections,
+  StyledStarRating,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
@@ -107,6 +109,10 @@ const InitialScreen = ({}: {}) => {
         <HorizontalDivider className="my-6" />
         <PasswordStrength type="weak" />
         <PasswordStrength type="strong" />
+
+        <SocialMediaConnections />
+
+        <StyledStarRating />
       </View>
     </ScrollView>
     // <View className="flex-1 bg-white justify-center items-center h-full">

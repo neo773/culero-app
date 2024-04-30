@@ -5,3 +5,7 @@ export * from "./StyledOtpInput";
 export * from "./SearchBar";
 export * from "./SortBy";
 export * from "./HorizontalDivider";
+export * from "./PasswordStrength";
+export * from "./PercentageBar";
+export * from "./SocialMediaConnections";
+export * from "./StarRating";

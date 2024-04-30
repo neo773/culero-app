@@ -16,7 +16,6 @@ export const PercentageBar = ({
   maxValue,
 }: PercentageBarProps) => {
   const innerWidthPercentage = (value * 100) / maxValue;
-  console.log("width per", innerWidthPercentage);
   return (
     <View
       className={`rounded-md`}
