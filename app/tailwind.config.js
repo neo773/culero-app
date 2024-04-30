@@ -15,9 +15,10 @@ module.exports = {
     extend: {
       borderRadius: {
         sm: "5px",
+        "3xl": "30px",
       },
       fontFamily: {
-        inter: ["Inter", "system-ui", "sans-serif"],
+        inter: ["Inter_400Normal", "system-ui", "sans-serif"],
         "inter-thin": ["Inter_100Thin", "Inter", "system-ui", "sans-serif"],
         "inter-extra-light": [
           "Inter_200ExtraLight",

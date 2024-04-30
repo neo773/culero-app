@@ -19,11 +19,43 @@ const InitialScreen = ({}: {}) => {
 
       <StyledPressable
         color="dark"
+        textVariant={{ weight: 900 }}
         onPress={() => {
           Alert.alert("I was pressed!");
         }}
       >
-        I am a default blue btn
+        I am a blue btn with weight 900
+      </StyledPressable>
+      <StyledPressable
+        color="dark"
+        fw
+        onPress={() => {
+          Alert.alert("I was pressed!");
+        }}
+      >
+        I am a full width btn
+      </StyledPressable>
+      <StyledPressable
+        color="white"
+        className="mt-2"
+        onPress={() => {
+          Alert.alert("I was pressed!");
+        }}
+        rightIconProps={{ name: "edit" }}
+      >
+        Edit Profile
+      </StyledPressable>
+
+      <StyledPressable
+        color="dark"
+        rounded
+        className="mt-2"
+        textVariant={{ color: "white" }}
+        onPress={() => {
+          Alert.alert("I was pressed!");
+        }}
+      >
+        Search
       </StyledPressable>
     </View>
     // <View className="flex-1 bg-white justify-center items-center h-full">
