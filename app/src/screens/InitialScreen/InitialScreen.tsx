@@ -57,6 +57,17 @@ const InitialScreen = ({}: {}) => {
       >
         Search
       </StyledPressable>
+      <StyledPressable
+        fw
+        color="white"
+        className="mt-2"
+        onPress={() => {
+          Alert.alert("I was pressed!");
+        }}
+        leftIconProps={{ name: "google" }}
+      >
+        Continue with Google
+      </StyledPressable>
     </View>
     // <View className="flex-1 bg-white justify-center items-center h-full">
     //   <Text

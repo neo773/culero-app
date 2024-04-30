@@ -29,6 +29,7 @@ type StyledPressableProps = PressableProps &
   ButtonVariants & {
     textVariant?: TextVariant;
     textClassName?: TextProps["className"];
+    leftIconProps?: IconProps;
     rightIconProps?: IconProps;
     children?: React.ReactNode;
     // variant?: keyof typeof buttonVariantStyle;
@@ -40,11 +41,13 @@ export const StyledPressable = ({
   className,
   textVariant,
   textClassName,
+  leftIconProps,
   rightIconProps,
   children,
   ...props
 }: StyledPressableProps) => (
   <Pressable className={button({ color, fw, rounded, className })} {...props}>
+    {leftIconProps && <Icon {...leftIconProps} />}
     <StyledText weight={500} {...textVariant} className={textClassName}>
       {children}
     </StyledText>
