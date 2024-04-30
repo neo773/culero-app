@@ -2,6 +2,7 @@ import { Text, TextProps } from "react-native";
 import { tv, type VariantProps } from "tailwind-variants";
 
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 const text = tv({
   base: "text-base",
@@ -12,7 +13,7 @@ const text = tv({
       300: "font-inter-light",
       400: "font-inter-regular",
       500: "font-inter-medium",
-      600: "font-inter-semibold",
+      600: "font-inter-semi-bold",
       700: "font-inter-bold",
       800: "font-inter-extra-bold",
       900: "font-inter-black",
@@ -20,6 +21,7 @@ const text = tv({
     color: {
       black: "text-black",
       white: "text-white",
+      gray35: "text-gray35",
     },
   },
   defaultVariants: {
@@ -35,6 +37,8 @@ export const StyledText = ({
   color,
   className,
   ...props
-}: StyledTextProps) => (
-  <Text className={text({ weight, color, className })} {...props} />
-);
+}: StyledTextProps) => {
+  return (
+    <Text className={twMerge(text({ weight, color }), className)} {...props} />
+  );
+};

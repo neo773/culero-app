@@ -4,3 +4,4 @@ export * from "./StyledTextInput";
 export * from "./StyledOtpInput";
 export * from "./SearchBar";
 export * from "./SortBy";
+export * from "./HorizontalDivider";

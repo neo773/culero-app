@@ -6,8 +6,10 @@ import {
   StyledTextInput,
   SearchBar,
   SortBy,
+  HorizontalDivider,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
+import { PasswordStrength } from "../../components/PasswordStrength";
 
 const InitialScreen = ({}: {}) => {
   return (
@@ -100,6 +102,11 @@ const InitialScreen = ({}: {}) => {
           ]}
           onSelect={(item) => console.log("selected item", item)}
         />
+
+        <StyledText>Divider: </StyledText>
+        <HorizontalDivider className="my-6" />
+        <PasswordStrength type="weak" />
+        <PasswordStrength type="strong" />
       </View>
     </ScrollView>
     // <View className="flex-1 bg-white justify-center items-center h-full">
