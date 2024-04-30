@@ -1,6 +1,7 @@
 import { View, Text, Alert } from "react-native";
 import React from "react";
-import { StyledPressable, StyledText } from "../../components";
+import { StyledPressable, StyledText, StyledTextInput } from "../../components";
+import { StyledOtpInput } from "../../components/StyledOtpInput";
 
 const InitialScreen = ({}: {}) => {
   return (
@@ -70,6 +71,11 @@ const InitialScreen = ({}: {}) => {
       >
         Continue with Google
       </StyledPressable>
+      <StyledTextInput
+        containerClassName="mt-2"
+        placeholder="Enter your email addres"
+      />
+      <StyledOtpInput containerClassName="mt-2" />
     </View>
     // <View className="flex-1 bg-white justify-center items-center h-full">
     //   <Text

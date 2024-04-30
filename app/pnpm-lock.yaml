@@ -56,6 +56,9 @@ importers:
       react-native-gesture-handler:
         specifier: ^2.16.0
         version: 2.16.0(react-native@0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0))(react@18.2.0)
+      react-native-otp-entry:
+        specifier: ^1.6.1
+        version: 1.6.1
       react-native-reanimated:
         specifier: ^3.8.1
         version: 3.8.1(@babel/core@7.24.4)(react-native@0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0))(react@18.2.0)
@@ -3405,6 +3408,9 @@ packages:
     peerDependencies:
       react: '*'
       react-native: '*'
+
+  react-native-otp-entry@1.6.1:
+    resolution: {integrity: sha512-a6nJu9lnezUyCsUU/HEJzmw+Sk/hX7WtqU1vW825DhPuAdHv1GcO28xOf69oIYEnkUAKyxpelA2u1k6hyScPcA==}
 
   react-native-reanimated@3.8.1:
     resolution: {integrity: sha512-EdM0vr3JEaNtqvstqESaPfOBy0gjYBkr1iEolWJ82Ax7io8y9OVUIphgsLKTB36CtR1XtmBw0RZVj7KArc7ZVA==}
@@ -8456,6 +8462,8 @@ snapshots:
       prop-types: 15.8.1
       react: 18.2.0
       react-native: 0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0)
+
+  react-native-otp-entry@1.6.1: {}
 
   react-native-reanimated@3.8.1(@babel/core@7.24.4)(react-native@0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0))(react@18.2.0):
     dependencies:

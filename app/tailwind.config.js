@@ -1,22 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("./colors");
 
 module.exports = {
   // NOTE: Update this to include the paths to all of your component files.
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-    colors: {
-      "light-primary": "#A1C0FF",
-      primary: "#1E68FF",
-      white: "#FFFFFF",
-      gray: "#D9D9D9",
-      "dark-grey": "#4C4C4C",
-      "light-grey": "#F1F1F1",
-    },
+    colors: colors,
     extend: {
       borderRadius: {
         sm: "5px",
+        md: "10px",
+        lg: "15px",
         "3xl": "30px",
       },
       fontFamily: {
