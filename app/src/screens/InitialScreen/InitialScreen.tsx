@@ -4,11 +4,11 @@ import { StyledPressable, StyledText } from "../../components";
 
 const InitialScreen = ({}: {}) => {
   return (
-    <View className="flex-1 bg-gray  items-center h-full py-20 px-12">
+    <View className="flex-1 bg-light-gray  items-center h-full py-20 px-12">
       <StyledText>
         Hello, here are your components. For starters, this is the default text
       </StyledText>
-      <StyledText>Button:</StyledText>
+      <StyledText>Buttons:</StyledText>
       <StyledPressable
         onPress={() => {
           Alert.alert("I was pressed!");
@@ -18,7 +18,8 @@ const InitialScreen = ({}: {}) => {
       </StyledPressable>
 
       <StyledPressable
-        color="dark"
+        color="primary"
+        className="mt-2"
         textVariant={{ weight: 900 }}
         onPress={() => {
           Alert.alert("I was pressed!");
@@ -27,7 +28,8 @@ const InitialScreen = ({}: {}) => {
         I am a blue btn with weight 900
       </StyledPressable>
       <StyledPressable
-        color="dark"
+        className="mt-2"
+        color="primary"
         fw
         onPress={() => {
           Alert.alert("I was pressed!");
@@ -47,7 +49,7 @@ const InitialScreen = ({}: {}) => {
       </StyledPressable>
 
       <StyledPressable
-        color="dark"
+        color="primary"
         rounded
         className="mt-2"
         textVariant={{ color: "white" }}
@@ -60,7 +62,7 @@ const InitialScreen = ({}: {}) => {
       <StyledPressable
         fw
         color="white"
-        className="mt-2"
+        className="mt-2 border"
         onPress={() => {
           Alert.alert("I was pressed!");
         }}

@@ -7,10 +7,12 @@ module.exports = {
   presets: [require("nativewind/preset")],
   theme: {
     colors: {
-      cyan: "#A1C0FF",
-      blue: "#1E68FF",
+      "light-primary": "#A1C0FF",
+      primary: "#1E68FF",
       white: "#FFFFFF",
-      gray: "#F0F0F0",
+      gray: "#D9D9D9",
+      "dark-grey": "#4C4C4C",
+      "light-grey": "#F1F1F1",
     },
     extend: {
       borderRadius: {

@@ -8,9 +8,9 @@ const button = tv({
   base: "rounded-md p-2 px-6 flex items-center justify-center flex-row",
   variants: {
     color: {
-      light: "bg-cyan",
+      light: "bg-light-primary",
       white: "bg-white",
-      dark: "bg-blue weight-900",
+      primary: "bg-primary weight-900",
     },
     // full width button
     fw: {
@@ -32,7 +32,6 @@ type StyledPressableProps = PressableProps &
     leftIconProps?: IconProps;
     rightIconProps?: IconProps;
     children?: React.ReactNode;
-    // variant?: keyof typeof buttonVariantStyle;
   };
 export const StyledPressable = ({
   color,
