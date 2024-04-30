@@ -5,6 +5,7 @@ import {
   StyledText,
   StyledTextInput,
   SearchBar,
+  SortBy,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 
@@ -92,9 +93,15 @@ const InitialScreen = ({}: {}) => {
           containerClassName="mt-2"
           onSubmit={(value) => Alert.alert(`Submitted with value ${value}`)}
         />
+        <SortBy
+          items={[
+            { value: "Recently added", label: "Recently added" },
+            { value: "smth else", label: "Something else" },
+          ]}
+          onSelect={(item) => console.log("selected item", item)}
+        />
       </View>
     </ScrollView>
-
     // <View className="flex-1 bg-white justify-center items-center h-full">
     //   <Text
     //     className="text-black

@@ -16,7 +16,7 @@ export const StyledOtpInput = ({ containerClassName }: StyledOtpInput) => (
         containerStyle: { display: "flex", justifyContent: "space-between" },
         pinCodeContainerStyle: {
           width: "18%",
-          backgroundColor: colors["light-grey"],
+          backgroundColor: colors.white,
           borderWidth: 0,
         },
         pinCodeTextStyle: {

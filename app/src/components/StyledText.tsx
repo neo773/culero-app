@@ -4,6 +4,7 @@ import { tv, type VariantProps } from "tailwind-variants";
 import React from "react";
 
 const text = tv({
+  base: "text-base",
   variants: {
     weight: {
       100: "font-inter-thin",
