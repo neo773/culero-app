@@ -53,7 +53,7 @@ export const SmallReviewCard = ({
             </StyledText>
             <StyledStarRating readonly startingValue={overallRating} />
           </View>
-          <View className="flex-grow mt-8 mb-4">
+          <View className="flex-grow mt-4 mb-4">
             <CategoryRating
               hideBar={true}
               categoryName="Professionalsim"
