@@ -80,6 +80,9 @@ importers:
       react-native-svg:
         specifier: 14.1.0
         version: 14.1.0(react-native@0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0))(react@18.2.0)
+      react-native-userpic:
+        specifier: ^2.0.3
+        version: 2.0.3(react-native@0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0))(react@18.2.0)
       react-redux:
         specifier: ^9.1.1
         version: 9.1.1(@types/react@18.2.79)(react-native@0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0))(react@18.2.0)(redux@5.0.1)
@@ -2575,6 +2578,9 @@ packages:
   join-component@1.1.0:
     resolution: {integrity: sha512-bF7vcQxbODoGK1imE2P9GS9aw4zD0Sd+Hni68IMZLj7zRnquH7dXUmMw9hDI5S/Jzt7q+IyTXN0rSg2GI0IKhQ==}
 
+  js-md5@0.7.3:
+    resolution: {integrity: sha512-ZC41vPSTLKGwIRjqDh8DfXoCrdQIyBgspJVPXHBGu4nZlAEvG3nf+jO9avM9RmLiGakg7vz974ms99nEV0tmTQ==}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -3468,6 +3474,13 @@ packages:
 
   react-native-svg@14.1.0:
     resolution: {integrity: sha512-HeseElmEk+AXGwFZl3h56s0LtYD9HyGdrpg8yd9QM26X+d7kjETrRQ9vCjtxuT5dCZEIQ5uggU1dQhzasnsCWA==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+
+  react-native-userpic@2.0.3:
+    resolution: {integrity: sha512-b2Rc40FEaAD7BCoCI2pQMAOSWrhzhje0edum2olXCqvBWdgs10HvdpPc/LXrWMo/AkDNPkdMVpaXZxFLsGPC5A==}
+    engines: {node: '>=16'}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -7611,6 +7624,8 @@ snapshots:
 
   join-component@1.1.0: {}
 
+  js-md5@0.7.3: {}
+
   js-tokens@4.0.0: {}
 
   js-yaml@3.14.1:
@@ -8551,6 +8566,12 @@ snapshots:
     dependencies:
       css-select: 5.1.0
       css-tree: 1.1.3
+      react: 18.2.0
+      react-native: 0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0)
+
+  react-native-userpic@2.0.3(react-native@0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0))(react@18.2.0):
+    dependencies:
+      js-md5: 0.7.3
       react: 18.2.0
       react-native: 0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4(@babel/core@7.24.4))(react@18.2.0)
 
