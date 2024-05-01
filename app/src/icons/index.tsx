@@ -5,9 +5,11 @@ import { SearchIcon } from "./SearchIcon";
 import Octicons from "@expo/vector-icons/Octicons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import FontAwesome5Brands from "@expo/vector-icons/FontAwesome5";
-
+import MaterialCommunity from "@expo/vector-icons/MaterialCommunityIcons";
+import Material from "@expo/vector-icons/MaterialIcons";
 import colors from "../../colors";
 import { twMerge } from "tailwind-merge";
+import { MessageIcon } from "./MessageIcon";
 
 export type IconName =
   | "edit"
@@ -18,7 +20,11 @@ export type IconName =
   | "instagram-square"
   | "linkedin-square"
   | "heart"
-  | "heart-o";
+  | "heart-o"
+  | "dots-horizontal"
+  | "message"
+  | "verified";
+
 export type IconProps = {
   name: IconName;
   size?: number;
@@ -71,6 +77,21 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
         <FontAwesome
           size={size}
           name="heart-o"
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
+      {name == "dots-horizontal" && (
+        <MaterialCommunity
+          size={size}
+          name="dots-horizontal"
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
+      {name == "message" && <MessageIcon />}
+      {name == "verified" && (
+        <Material
+          size={size}
+          name={"verified"}
           color={color ? colors[color] : colors["black"]}
         />
       )}

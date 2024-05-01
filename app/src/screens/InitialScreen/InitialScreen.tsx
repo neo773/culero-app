@@ -11,6 +11,7 @@ import {
   StyledStarRating,
   OverallRateCard,
   ReviewCard,
+  SmallReviewCard,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
@@ -31,7 +32,6 @@ const InitialScreen = ({}: {}) => {
         >
           I am a default btn
         </StyledPressable>
-
         <StyledPressable
           color="primary"
           className="mt-2"
@@ -62,7 +62,6 @@ const InitialScreen = ({}: {}) => {
         >
           Edit Profile
         </StyledPressable>
-
         <StyledPressable
           color="primary"
           rounded
@@ -106,14 +105,11 @@ const InitialScreen = ({}: {}) => {
           ]}
           onSelect={(item) => console.log("selected item", item)}
         />
-
         <StyledText>Divider: </StyledText>
         <HorizontalDivider className="my-6" />
         <PasswordStrength type="weak" />
         <PasswordStrength type="strong" />
-
         <SocialMediaConnections />
-
         <StyledStarRating />
         <OverallRateCard
           className="mt-8"
@@ -144,6 +140,28 @@ const InitialScreen = ({}: {}) => {
           isAnonymous={true}
           userImage="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           review="What impressed me the most was Logan Davis's strategic thinking and the way they handled challenges. Their clear communication and willingness to listen to team members' ideas created a positive and collaborative work environment."
+        />
+        <SmallReviewCard
+          className="mt-8 w-2/3"
+          professionalismRating={4.1}
+          reliabilityRating={5}
+          communicationRating={2.3}
+          overallRating={4.5}
+          isFavourite={false}
+          userName="Ionel Ionescu"
+          isUserVerified={true}
+          userImage="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+        <SmallReviewCard
+          className="mt-8 flex-auto w-2/3"
+          professionalismRating={4.1}
+          reliabilityRating={5}
+          communicationRating={2.3}
+          overallRating={4.5}
+          isFavourite={true}
+          userName="Ionel Ionescu"
+          isUserVerified={false}
+          userImage="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
       </View>
     </ScrollView>

@@ -13,4 +13,5 @@ export default {
   "nickel-gray": "#929292",
   gray83: "#838383",
   black: "#000000",
+  "light-green": "#8ECE90",
 };
