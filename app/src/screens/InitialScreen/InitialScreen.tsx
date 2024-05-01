@@ -19,6 +19,7 @@ import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
 import { ConnectionReviewCard } from "../../components/ConnectionsReviewCard";
 import { Icon } from "../../icons";
+import { SocialMediaCard } from "../../icons/SocialMediaCard";
 
 const InitialScreen = ({}: {}) => {
   return (
@@ -188,6 +189,7 @@ const InitialScreen = ({}: {}) => {
           <Icon name="instagram-color" />
           <Icon name="twitter-color" />
         </View>
+        <SocialMediaCard className="mt-8 w-1/2" />
       </View>
     </ScrollView>
     // <View className="flex-1 bg-white justify-center items-center h-full">
