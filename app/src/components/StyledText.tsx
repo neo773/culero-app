@@ -19,9 +19,11 @@ const text = tv({
       900: "font-inter-black",
     },
     color: {
+      darkgrey: "text-dark-grey",
       black: "text-black",
       white: "text-white",
       gray35: "text-gray35",
+      nickel: "text-nickel-gray",
     },
   },
   defaultVariants: {

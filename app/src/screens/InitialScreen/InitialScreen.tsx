@@ -9,6 +9,7 @@ import {
   HorizontalDivider,
   SocialMediaConnections,
   StyledStarRating,
+  OverallRateCard,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
@@ -113,6 +114,13 @@ const InitialScreen = ({}: {}) => {
         <SocialMediaConnections />
 
         <StyledStarRating />
+        <OverallRateCard
+          className="mt-4"
+          overallRating={4.5}
+          professionalismRating={4}
+          reliabilityRating={5}
+          communicationRating={2}
+        />
       </View>
     </ScrollView>
     // <View className="flex-1 bg-white justify-center items-center h-full">

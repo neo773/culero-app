@@ -9,5 +9,6 @@ export default {
   "light-grey": "#F1F1F1",
   gray33: "#545454",
   gray35: "#595959",
+  "nickel-gray": "#929292",
   black: "#000000",
 };
