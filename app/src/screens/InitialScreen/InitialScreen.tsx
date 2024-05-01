@@ -18,6 +18,7 @@ import {
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
 import { ConnectionReviewCard } from "../../components/ConnectionsReviewCard";
+import { Icon } from "../../icons";
 
 const InitialScreen = ({}: {}) => {
   return (
@@ -181,6 +182,12 @@ const InitialScreen = ({}: {}) => {
           userAvatar="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
         <ConnectionReviewCard className="mt-8" />
+        <View className="flex-row mt-8">
+          <Icon name="github-color" />
+          <Icon name="linkedin-color" />
+          <Icon name="instagram-color" />
+          <Icon name="twitter-color" />
+        </View>
       </View>
     </ScrollView>
     // <View className="flex-1 bg-white justify-center items-center h-full">

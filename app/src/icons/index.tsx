@@ -11,6 +11,10 @@ import colors from "../../colors";
 import { twMerge } from "tailwind-merge";
 import { MessageIcon } from "./MessageIcon";
 import { ReviewIcon } from "./ReviewIcon";
+import { InstaIcon } from "./InstagramIcon";
+import { LinkedinIcon } from "./LinkedinIcon";
+import { TwitterIcon } from "./TwitterIcon";
+import { GithubIcon } from "./GithubIcon";
 
 export type IconName =
   | "edit"
@@ -25,7 +29,11 @@ export type IconName =
   | "dots-horizontal"
   | "message"
   | "verified"
-  | "review";
+  | "review"
+  | "instagram-color"
+  | "linkedin-color"
+  | "github-color"
+  | "twitter-color";
 
 export type IconProps = {
   name: IconName;
@@ -98,6 +106,10 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
         />
       )}
       {name == "review" && <ReviewIcon />}
+      {name == "instagram-color" && <InstaIcon />}
+      {name == "linkedin-color" && <LinkedinIcon />}
+      {name == "twitter-color" && <TwitterIcon />}
+      {name == "github-color" && <GithubIcon />}
     </View>
   );
 };
