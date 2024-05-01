@@ -18,7 +18,7 @@ export const CategoryRating = ({
           {categoryName}
         </StyledText>
       </View>
-      <View className="flex-grow mx-2">
+      <View className="flex-grow mr-2">
         <PercentageBar maxValue={maxRating} value={rating} height={15} />
       </View>
       <View>
@@ -27,7 +27,7 @@ export const CategoryRating = ({
           <StyledText
             weight={500}
             className="text-xs"
-          >{`/${maxRating}`}</StyledText>
+          >{` / ${maxRating}`}</StyledText>
         </StyledText>
       </View>
     </View>

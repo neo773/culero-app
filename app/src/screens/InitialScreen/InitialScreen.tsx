@@ -10,6 +10,7 @@ import {
   SocialMediaConnections,
   StyledStarRating,
   OverallRateCard,
+  ReviewCard,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
@@ -17,7 +18,7 @@ import { PasswordStrength } from "../../components/PasswordStrength";
 const InitialScreen = ({}: {}) => {
   return (
     <ScrollView>
-      <View className="flex-1 bg-dark-gray  items-center h-full py-20 px-12">
+      <View className="flex-1 bg-dark-gray  items-center h-full py-20 px-4">
         <StyledText>
           Hello, here are your components. For starters, this is the default
           text
@@ -115,11 +116,34 @@ const InitialScreen = ({}: {}) => {
 
         <StyledStarRating />
         <OverallRateCard
-          className="mt-4"
+          className="mt-8"
           overallRating={4.5}
-          professionalismRating={4}
+          professionalismRating={4.1}
           reliabilityRating={5}
           communicationRating={2}
+        />
+        <ReviewCard
+          className="mt-8"
+          professionalismRating={4.1}
+          reliabilityRating={5}
+          communicationRating={2.3}
+          overallRating={4.5}
+          date={new Date()}
+          isFavourite={true}
+          userImage="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          review="What impressed me the most was Logan Davis's strategic thinking and the way they handled challenges. Their clear communication and willingness to listen to team members' ideas created a positive and collaborative work environment."
+        />
+        <ReviewCard
+          className="mt-8"
+          professionalismRating={4.1}
+          reliabilityRating={5}
+          communicationRating={2.3}
+          overallRating={4.5}
+          date={new Date()}
+          isFavourite={false}
+          isAnonymous={true}
+          userImage="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          review="What impressed me the most was Logan Davis's strategic thinking and the way they handled challenges. Their clear communication and willingness to listen to team members' ideas created a positive and collaborative work environment."
         />
       </View>
     </ScrollView>

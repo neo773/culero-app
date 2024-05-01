@@ -12,3 +12,5 @@ export * from "./StarRating";
 export * from "./Card";
 export * from "./OverallRateCard";
 export * from "./CategoryRating";
+export * from "./Avatar";
+export * from "./ReviewCard";

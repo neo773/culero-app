@@ -22,7 +22,7 @@ export const Card = ({
   bodyClassName,
 }: CardProps) => {
   return (
-    <View className={twMerge("bg-white rounded-lg w-full p-2 py-6", className)}>
+    <View className={twMerge("bg-white rounded-lg w-full p-4", className)}>
       {!!headerComponent && (
         <View className={twMerge("", headerClassName)}>{headerComponent}</View>
       )}

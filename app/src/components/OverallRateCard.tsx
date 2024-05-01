@@ -27,7 +27,7 @@ export const OverallRateCard = ({
         <View className="flex-row">
           <View className="p-1 align-center justify-center mr-2">
             <StyledText weight={700} className="text-3xl text-center">
-              {overallRating.toFixed(1)}
+              {overallRating.toLocaleString("en", { maximumFractionDigits: 1 })}
               <StyledText
                 weight={300}
                 className="text-lg"

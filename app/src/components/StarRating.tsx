@@ -1,8 +1,7 @@
 import React from "react";
 import colors from "../../colors";
 import { Rating, SwipeRatingProps } from "react-native-ratings";
-import { View } from "react-native";
-import { ViewProps } from "react-native-svg/lib/typescript/fabric/utils";
+import { View, ViewProps } from "react-native";
 
 const STAR_IMAGE = require("../../assets/star.png");
 export const StyledStarRating = ({
@@ -15,6 +14,7 @@ export const StyledStarRating = ({
         type="custom"
         ratingColor={colors["light-primary"]}
         ratingImage={STAR_IMAGE}
+        imageSize={18}
         {...props}
       />
     </View>

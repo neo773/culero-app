@@ -2,6 +2,7 @@ export default {
   "light-primary": "#A1C0FF",
   green: "#90D093",
   red: "#DC8E89",
+  "deep-red": "#B60000",
   primary: "#1E68FF",
   white: "#FFFFFF",
   gray: "#D9D9D9",
@@ -10,5 +11,6 @@ export default {
   gray33: "#545454",
   gray35: "#595959",
   "nickel-gray": "#929292",
+  gray83: "#838383",
   black: "#000000",
 };

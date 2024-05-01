@@ -16,7 +16,9 @@ export type IconName =
   | "arrow-down"
   | "github-square"
   | "instagram-square"
-  | "linkedin-square";
+  | "linkedin-square"
+  | "heart"
+  | "heart-o";
 export type IconProps = {
   name: IconName;
   size?: number;
@@ -55,6 +57,20 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
         <FontAwesome5Brands
           size={size}
           name="instagram-square"
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
+      {name == "heart" && (
+        <FontAwesome
+          size={size}
+          name="heart"
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
+      {name == "heart-o" && (
+        <FontAwesome
+          size={size}
+          name="heart-o"
           color={color ? colors[color] : colors["black"]}
         />
       )}
