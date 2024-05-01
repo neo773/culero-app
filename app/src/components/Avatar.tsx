@@ -9,11 +9,13 @@ export type AvatarProps = {
   size?: number;
   hasBadge?: boolean;
   isVerified?: boolean;
+  badgeSize?: number;
 };
 export const Avatar = ({
   userImage,
   isAnonymous,
   size = 40,
+  badgeSize = 20,
   hasBadge,
   isVerified,
 }: AvatarProps) => {
@@ -32,7 +34,7 @@ export const Avatar = ({
         <View className="absolute bottom-0 right-0">
           <Icon
             name="verified"
-            size={size - 20}
+            size={badgeSize}
             color={isVerified ? "light-green" : "dark-grey"}
           />
         </View>

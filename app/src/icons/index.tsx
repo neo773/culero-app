@@ -10,6 +10,7 @@ import Material from "@expo/vector-icons/MaterialIcons";
 import colors from "../../colors";
 import { twMerge } from "tailwind-merge";
 import { MessageIcon } from "./MessageIcon";
+import { ReviewIcon } from "./ReviewIcon";
 
 export type IconName =
   | "edit"
@@ -23,7 +24,8 @@ export type IconName =
   | "heart-o"
   | "dots-horizontal"
   | "message"
-  | "verified";
+  | "verified"
+  | "review";
 
 export type IconProps = {
   name: IconName;
@@ -95,6 +97,7 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
           color={color ? colors[color] : colors["black"]}
         />
       )}
+      {name == "review" && <ReviewIcon />}
     </View>
   );
 };

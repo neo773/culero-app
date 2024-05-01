@@ -16,3 +16,4 @@ export * from "./Avatar";
 export * from "./ReviewCard";
 export * from "./SmallReviewCard";
 export * from "./MyReviewsCard";
+export * from "./ConnectionDetails";
