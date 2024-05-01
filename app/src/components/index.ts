@@ -15,3 +15,4 @@ export * from "./CategoryRating";
 export * from "./Avatar";
 export * from "./ReviewCard";
 export * from "./SmallReviewCard";
+export * from "./MyReviewsCard";

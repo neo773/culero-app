@@ -5,6 +5,7 @@ export type CategoryRatingProps = {
   maxRating?: number;
   rating: number;
   hideBar?: boolean;
+  hideNumbers?: boolean;
   categoryName: string;
 };
 export const CategoryRating = ({
@@ -12,6 +13,7 @@ export const CategoryRating = ({
   rating,
   categoryName,
   hideBar,
+  hideNumbers,
 }: CategoryRatingProps) => {
   return (
     <View className="flex-row justify-between my-1 items-center">
@@ -25,15 +27,17 @@ export const CategoryRating = ({
           <PercentageBar maxValue={maxRating} value={rating} height={15} />
         </View>
       )}
-      <View>
-        <StyledText weight={700} className="text-sm">
-          {rating.toFixed(1)}
-          <StyledText
-            weight={500}
-            className="text-xs"
-          >{` / ${maxRating}`}</StyledText>
-        </StyledText>
-      </View>
+      {!hideNumbers && (
+        <View>
+          <StyledText weight={700} className="text-sm">
+            {rating.toFixed(1)}
+            <StyledText
+              weight={500}
+              className="text-xs"
+            >{` / ${maxRating}`}</StyledText>
+          </StyledText>
+        </View>
+      )}
     </View>
   );
 };
