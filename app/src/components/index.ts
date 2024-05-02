@@ -20,3 +20,4 @@ export * from "./ConnectionDetails";
 export * from "./InviteCard";
 export * from "./NewUserCard";
 export * from "./VerticalDivider";
+export * from "./UserCard";

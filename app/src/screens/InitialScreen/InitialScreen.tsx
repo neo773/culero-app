@@ -16,6 +16,7 @@ import {
   ConnectionDetails,
   InviteCard,
   NewUserCard,
+  UserCard,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
@@ -197,6 +198,16 @@ const InitialScreen = ({}: {}) => {
           className="mt-8"
           userName="Ethan Moore"
           userPosition="profession"
+        />
+        <UserCard
+          className="mt-8"
+          userName="Logan Davis"
+          userPosition="UX designer"
+          isVerified={true}
+          revewisCount={20}
+          connectionsCount={100}
+          joinedDate={new Date()}
+          userAvatar="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
       </View>
     </ScrollView>

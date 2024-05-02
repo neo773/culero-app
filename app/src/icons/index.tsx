@@ -15,6 +15,8 @@ import { InstaIcon } from "./InstagramIcon";
 import { LinkedinIcon } from "./LinkedinIcon";
 import { TwitterIcon } from "./TwitterIcon";
 import { GithubIcon } from "./GithubIcon";
+import { UserStarIcon } from "./UserStarIcon";
+import { UserGroupIcon } from "./UserGroupIcon";
 
 export type IconName =
   | "edit"
@@ -33,7 +35,9 @@ export type IconName =
   | "instagram-color"
   | "linkedin-color"
   | "github-color"
-  | "twitter-color";
+  | "twitter-color"
+  | "user-star"
+  | "user-group";
 
 export type IconProps = {
   name: IconName;
@@ -110,6 +114,8 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
       {name == "linkedin-color" && <LinkedinIcon />}
       {name == "twitter-color" && <TwitterIcon />}
       {name == "github-color" && <GithubIcon />}
+      {name == "user-star" && <UserStarIcon />}
+      {name == "user-group" && <UserGroupIcon />}
     </View>
   );
 };

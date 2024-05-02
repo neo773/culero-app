@@ -16,4 +16,6 @@ export default {
   "light-green": "#8ECE90",
   white7: "#E7E7E7",
   grayAB: "#ABABAB",
+  grayC5: "#C5C5C5",
+  whiteFA: "#FAFAFA",
 };

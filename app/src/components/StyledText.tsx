@@ -28,6 +28,7 @@ const text = tv({
       gray33: "text-gray33",
       primary: "text-primary",
       white7: "text-white7",
+      whiteFA: "text-whiteFA",
     },
     sm: {
       true: "text-sm",
