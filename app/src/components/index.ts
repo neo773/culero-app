@@ -21,3 +21,6 @@ export * from "./InviteCard";
 export * from "./NewUserCard";
 export * from "./VerticalDivider";
 export * from "./UserCard";
+export * from "./ProfileCard";
+export * from "./GiveReviewCard";
+export * from "./Checkbox";

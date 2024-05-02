@@ -63,14 +63,14 @@ export const UserCard = ({
           </View>
           <View className="flex-row self-end mt-2">
             <View className="flex-row">
-              <Icon name="user-star" color="grayC5" />
+              <Icon name="user-star" color="grayC5" size={15} />
               <StyledText color="whiteFA" sm>
                 {`${revewisCount} reviews`}
               </StyledText>
             </View>
 
             <View className="flex-row mx-4">
-              <Icon name="user-group" color="grayC5" />
+              <Icon name="user-group" color="grayC5" size={15} />
               <StyledText color="whiteFA" sm>
                 {`${connectionsCount} connections`}
               </StyledText>

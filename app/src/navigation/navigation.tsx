@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import HomeScreen from "../screens/HomeScreen";
 import InitialScreen from "../screens/InitialScreen";
 import { BottomNavigator } from "./BottomTabNavigator";
+import { DrawerNavigator } from "./DrawerNavigation";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -27,7 +28,7 @@ const RootNavigator = () => {
         </>
       ) : (
         <>
-          <Stack.Screen name="InitialScreen" component={InitialScreen} />
+          <Stack.Screen name="InitialScreen" component={DrawerNavigator} />
         </>
       )}
     </Stack.Navigator>

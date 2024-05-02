@@ -1,27 +1,31 @@
-import { RootStackParamList } from "../types"
-import { LinkingOptions } from "@react-navigation/native"
-import * as Linking from "expo-linking"
-
+import { RootStackParamList } from "../types";
+import { LinkingOptions } from "@react-navigation/native";
+import * as Linking from "expo-linking";
+import HomeScreen from "../screens/HomeScreen";
+import InitialScreen from "../screens/InitialScreen";
 
 const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [Linking.createURL("/")],
 
   async getInitialURL() {
-    const url = await Linking.getInitialURL()
+    const url = await Linking.getInitialURL();
 
-    return url
+    return url;
   },
 
   subscribe(listener) {
-    return () => {
-
-    }
+    return () => {};
   },
 
   config: {
     screens: {
-      HomeScreen: "home",
-      InitialScreen: "initial",
+      HomeScreen: {
+        screens: HomeScreen,
+      },
+      InitialScreen: {
+        path: "initial",
+        screens: InitialScreen,
+      },
       // SignIn: "signin",
       // SignUp: "signup",
       // ForgotPassword: "forgotpassword",
@@ -29,6 +33,6 @@ const linking: LinkingOptions<RootStackParamList> = {
       // NewPassword: "resetpassword/:email/:resetcode",
     },
   },
-}
+};
 
-export default linking
+export default linking;

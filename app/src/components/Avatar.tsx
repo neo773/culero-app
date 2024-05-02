@@ -13,6 +13,7 @@ export type AvatarProps = {
   isVerified?: boolean;
   badgeSize?: number;
   hideBorder?: boolean;
+  borderColor?: keyof typeof colors;
 };
 export const Avatar = ({
   userImage,
@@ -22,6 +23,7 @@ export const Avatar = ({
   hasBadge,
   isVerified,
   hideBorder = false,
+  borderColor = "black",
 }: AvatarProps) => {
   return (
     <View className="pb-2 pr-2">
@@ -36,7 +38,10 @@ export const Avatar = ({
         defaultSource={USER_DEFAULT_IMAGE}
         radius={2000}
         size={size}
-        style={{ borderWidth: hideBorder ? 0 : 1, borderColor: colors.black }}
+        style={{
+          borderWidth: hideBorder ? 0 : 1,
+          borderColor: colors[borderColor],
+        }}
       />
       {hasBadge && (
         <View className="absolute bottom-0 right-0">

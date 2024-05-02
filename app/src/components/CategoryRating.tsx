@@ -17,7 +17,7 @@ export const CategoryRating = ({
 }: CategoryRatingProps) => {
   return (
     <View className="flex-row justify-between my-1 items-center">
-      <View className="w-5/12">
+      <View className="w-24 mr-2">
         <StyledText weight={600} className="text-xs" color="darkgrey">
           {categoryName}
         </StyledText>

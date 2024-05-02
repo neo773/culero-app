@@ -26,9 +26,12 @@ const text = tv({
       nickel: "text-nickel-gray",
       gray83: "text-gray83",
       gray33: "text-gray33",
+      gray38: "text-gray38",
+      gray39: "text-gray39",
       primary: "text-primary",
       white7: "text-white7",
       whiteFA: "text-whiteFA",
+      gray7C: "text-gray7C",
     },
     sm: {
       true: "text-sm",
