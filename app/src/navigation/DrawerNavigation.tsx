@@ -11,6 +11,7 @@ import { View, ViewProps } from "react-native";
 import { Avatar, HorizontalDivider, StyledText } from "../components";
 import { IconButton } from "../components/IconButton";
 import { twMerge } from "tailwind-merge";
+import { useScreenInfo } from "../hooks/useScreenInfo";
 
 const Drawer = createDrawerNavigator();
 
@@ -26,22 +27,30 @@ const DrawerHeader = ({
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   };
   return (
-    <View className={className}>
-      <View className="flex-row justify-between items-center px-6 py-4">
-        <View className="flex-row items-center">
-          <Avatar userImage={avatar} />
-          <StyledText
-            weight={600}
-            color="black"
-          >{`${firstName} | ${lastName}`}</StyledText>
+    <>
+      <View className={twMerge("md:hidden", className)}>
+        <View className="flex-row justify-between items-center px-6 py-4">
+          <View className="flex-row items-center">
+            <Avatar userImage={avatar} />
+            <StyledText
+              weight={600}
+              color="black"
+            >{`${firstName} | ${lastName}`}</StyledText>
+          </View>
+          <IconButton
+            iconProps={{ name: "notifications", color: "gray38", size: 23 }}
+            onPress={() => {}}
+          />
         </View>
-        <IconButton
-          iconProps={{ name: "notifications", color: "gray38", size: 23 }}
-          onPress={() => {}}
-        />
+        <HorizontalDivider />
       </View>
-      <HorizontalDivider />
-    </View>
+
+      <View className={twMerge("xs: hidden md:block p-7", className)}>
+        <StyledText color="primary" xl4>
+          CULERO
+        </StyledText>
+      </View>
+    </>
   );
 };
 
@@ -82,10 +91,13 @@ function CustomDrawerContent(props: DrawerContentComponentProps) {
 }
 
 export const DrawerNavigator = () => {
+  const { isPhone } = useScreenInfo();
+
   return (
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{
+        drawerType: isPhone ? "front" : "permanent",
         drawerActiveTintColor: "#F5F6F8",
         drawerLabelStyle: {
           fontFamily: "Inter_500Medium",
