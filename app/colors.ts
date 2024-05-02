@@ -12,6 +12,7 @@ export default {
   gray35: "#595959",
   "nickel-gray": "#929292",
   gray83: "#838383",
+  gray38: "#383838",
   black: "#000000",
   "light-green": "#8ECE90",
   white7: "#E7E7E7",

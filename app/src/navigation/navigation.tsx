@@ -27,7 +27,7 @@ const RootNavigator = () => {
         </>
       ) : (
         <>
-          <Stack.Screen name="InitialScreen" component={InitialScreen} />
+          <Stack.Screen name="InitialScreen" component={BottomNavigator} />
         </>
       )}
     </Stack.Navigator>

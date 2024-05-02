@@ -7,6 +7,8 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import FontAwesome5Brands from "@expo/vector-icons/FontAwesome5";
 import MaterialCommunity from "@expo/vector-icons/MaterialCommunityIcons";
 import Material from "@expo/vector-icons/MaterialIcons";
+import AntDesign from "@expo/vector-icons/AntDesign";
+
 import colors from "../../colors";
 import { twMerge } from "tailwind-merge";
 import { MessageIcon } from "./MessageIcon";
@@ -17,6 +19,7 @@ import { TwitterIcon } from "./TwitterIcon";
 import { GithubIcon } from "./GithubIcon";
 import { UserStarIcon } from "./UserStarIcon";
 import { UserGroupIcon } from "./UserGroupIcon";
+import { HomeIcon } from "./HomeIcon";
 
 export type IconName =
   | "edit"
@@ -37,7 +40,9 @@ export type IconName =
   | "github-color"
   | "twitter-color"
   | "user-star"
-  | "user-group";
+  | "user-group"
+  | "home"
+  | "plus";
 
 export type IconProps = {
   name: IconName;
@@ -114,8 +119,23 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
       {name == "linkedin-color" && <LinkedinIcon />}
       {name == "twitter-color" && <TwitterIcon />}
       {name == "github-color" && <GithubIcon />}
-      {name == "user-star" && <UserStarIcon />}
+      {name == "user-star" && (
+        <UserStarIcon size={size} color={color ? colors[color] : undefined} />
+      )}
       {name == "user-group" && <UserGroupIcon />}
+      {name == "home" && (
+        <HomeIcon
+          color={color ? colors[color] : colors["black"]}
+          size={size || 25}
+        />
+      )}
+      {name == "plus" && (
+        <AntDesign
+          size={size}
+          name="pluscircle"
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
     </View>
   );
 };
