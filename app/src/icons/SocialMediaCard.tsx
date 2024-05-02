@@ -15,6 +15,7 @@ const StackedIcons = ({
     >
       {names.map((name, index) => (
         <View
+          key={name}
           style={{
             position: "absolute",
             left: index * spacing,

@@ -14,6 +14,7 @@ import {
   SmallReviewCard,
   MyReviewsCard,
   ConnectionDetails,
+  InviteCard,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
@@ -24,7 +25,7 @@ import { SocialMediaCard } from "../../icons/SocialMediaCard";
 const InitialScreen = ({}: {}) => {
   return (
     <ScrollView>
-      <View className="flex-1 bg-dark-gray  items-center h-full py-20 px-4">
+      <View className="flex-1 bg-dark-gray items-center h-full py-20 px-4">
         <StyledText>
           Hello, here are your components. For starters, this is the default
           text
@@ -190,6 +191,7 @@ const InitialScreen = ({}: {}) => {
           <Icon name="twitter-color" />
         </View>
         <SocialMediaCard className="mt-8 w-1/2" />
+        <InviteCard className="mt-8 w-3/4" />
       </View>
     </ScrollView>
     // <View className="flex-1 bg-white justify-center items-center h-full">

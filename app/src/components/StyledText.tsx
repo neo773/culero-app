@@ -27,6 +27,45 @@ const text = tv({
       gray83: "text-gray83",
       gray33: "text-gray33",
     },
+    sm: {
+      true: "text-sm",
+    },
+    xs: {
+      true: "text-xs",
+    },
+    md: {
+      true: "text-md",
+    },
+    lg: {
+      true: "text-lg",
+    },
+    xl: {
+      true: "text-xl",
+    },
+    xl2: {
+      true: "text-2xl",
+    },
+    xl3: {
+      true: "text-3xl",
+    },
+    xl4: {
+      true: "text-4xl",
+    },
+    xl5: {
+      true: "text-5xl",
+    },
+    xl6: {
+      true: "text-6xl",
+    },
+    xl7: {
+      true: "text-7xl",
+    },
+    xl8: {
+      true: "text-8xl",
+    },
+    xl9: {
+      true: "text-9xl",
+    },
   },
   defaultVariants: {
     weight: 400,
@@ -39,10 +78,46 @@ export type StyledTextProps = TextProps & TextVariant;
 export const StyledText = ({
   weight,
   color,
+  sm,
+  xs,
+  md,
+  lg,
+  xl,
+  xl2,
+  xl3,
+  xl4,
+  xl5,
+  xl6,
+  xl7,
+  xl8,
+  xl9,
+
   className,
   ...props
 }: StyledTextProps) => {
   return (
-    <Text className={twMerge(text({ weight, color }), className)} {...props} />
+    <Text
+      className={twMerge(
+        text({
+          weight,
+          color,
+          sm,
+          xs,
+          md,
+          lg,
+          xl,
+          xl2,
+          xl3,
+          xl4,
+          xl5,
+          xl6,
+          xl7,
+          xl8,
+          xl9,
+        }),
+        className
+      )}
+      {...props}
+    />
   );
 };
