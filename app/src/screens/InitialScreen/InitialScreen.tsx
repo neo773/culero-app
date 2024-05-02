@@ -15,6 +15,7 @@ import {
   MyReviewsCard,
   ConnectionDetails,
   InviteCard,
+  NewUserCard,
 } from "../../components";
 import { StyledOtpInput } from "../../components/StyledOtpInput";
 import { PasswordStrength } from "../../components/PasswordStrength";
@@ -192,16 +193,13 @@ const InitialScreen = ({}: {}) => {
         </View>
         <SocialMediaCard className="mt-8 w-1/2" />
         <InviteCard className="mt-8 w-3/4" />
+        <NewUserCard
+          className="mt-8"
+          userName="Ethan Moore"
+          userPosition="profession"
+        />
       </View>
     </ScrollView>
-    // <View className="flex-1 bg-white justify-center items-center h-full">
-    //   <Text
-    //     className="text-black
-    //    font-bold text-2xl"
-    //   >
-    //     CUL
-    //   </Text>
-    // </View>
   );
 };
 

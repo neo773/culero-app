@@ -3,6 +3,7 @@ import React, { Children } from "react";
 import { StyledText, StyledTextProps, type TextVariant } from "./StyledText";
 import { VariantProps, tv } from "tailwind-variants";
 import { Icon, IconProps } from "../icons";
+import { twMerge } from "tailwind-merge";
 
 const button = tv({
   base: "rounded-md p-2 px-6 flex items-center justify-center flex-row",
@@ -47,7 +48,11 @@ export const StyledPressable = ({
 }: StyledPressableProps) => (
   <Pressable className={button({ color, fw, rounded, className })} {...props}>
     {leftIconProps && <Icon {...leftIconProps} />}
-    <StyledText weight={500} {...textVariant} className={textClassName}>
+    <StyledText
+      weight={500}
+      {...textVariant}
+      className={twMerge("text-center", textClassName)}
+    >
       {children}
     </StyledText>
     {rightIconProps && <Icon {...rightIconProps} />}

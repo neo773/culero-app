@@ -3,6 +3,8 @@ import colors from "../../colors";
 import { View } from "react-native";
 import { Icon } from "../icons";
 const ANONYMOUS_IMAGE = require("../../assets/anonymous.png");
+const USER_DEFAULT_IMAGE = require("../../assets/default-user-image.png");
+
 export type AvatarProps = {
   userImage?: string;
   isAnonymous?: boolean;
@@ -10,6 +12,7 @@ export type AvatarProps = {
   hasBadge?: boolean;
   isVerified?: boolean;
   badgeSize?: number;
+  hideBorder?: boolean;
 };
 export const Avatar = ({
   userImage,
@@ -18,24 +21,29 @@ export const Avatar = ({
   badgeSize = 20,
   hasBadge,
   isVerified,
+  hideBorder = false,
 }: AvatarProps) => {
   return (
     <View className="pb-2 pr-2">
       <Userpic
         source={
-          userImage && !isAnonymous ? { uri: userImage } : ANONYMOUS_IMAGE
+          userImage
+            ? !isAnonymous
+              ? { uri: userImage }
+              : ANONYMOUS_IMAGE
+            : USER_DEFAULT_IMAGE
         }
-        defaultSource={ANONYMOUS_IMAGE}
+        defaultSource={USER_DEFAULT_IMAGE}
         radius={2000}
         size={size}
-        style={{ borderWidth: 1, borderColor: colors.black }}
+        style={{ borderWidth: hideBorder ? 0 : 1, borderColor: colors.black }}
       />
       {hasBadge && (
         <View className="absolute bottom-0 right-0">
           <Icon
             name="verified"
             size={badgeSize}
-            color={isVerified ? "light-green" : "dark-grey"}
+            color={isVerified ? "light-green" : "grayAB"}
           />
         </View>
       )}

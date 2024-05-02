@@ -14,4 +14,6 @@ export default {
   gray83: "#838383",
   black: "#000000",
   "light-green": "#8ECE90",
+  white7: "#E7E7E7",
+  grayAB: "#ABABAB",
 };

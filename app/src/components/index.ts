@@ -18,3 +18,5 @@ export * from "./SmallReviewCard";
 export * from "./MyReviewsCard";
 export * from "./ConnectionDetails";
 export * from "./InviteCard";
+export * from "./NewUserCard";
+export * from "./VerticalDivider";
