@@ -1,16 +1,23 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import InitialScreen from "../screens/InitialScreen";
 import { Icon } from "../icons";
+import { useScreenInfo } from "../hooks/useScreenInfo";
 
 const Tab = createBottomTabNavigator();
 
 export function BottomNavigator() {
+  const { isPhone } = useScreenInfo();
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
         tabBarIconStyle: {},
-        tabBarStyle: { height: 75, padding: 10, paddingBottom: 10 },
+        tabBarStyle: {
+          height: 75,
+          padding: 10,
+          display: isPhone ? "flex" : "none",
+          paddingBottom: 10,
+        },
         tabBarLabelStyle: { fontFamily: "Inter_400Regular", color: "black" },
       }}
     >

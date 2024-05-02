@@ -25,11 +25,12 @@ import { PasswordStrength } from "../../components/PasswordStrength";
 import { ConnectionReviewCard } from "../../components/ConnectionsReviewCard";
 import { Icon } from "../../icons";
 import { SocialMediaCard } from "../../icons/SocialMediaCard";
+import { SearchableConnectionsCard } from "../../components/SearchableConnectionsCard";
 
 const InitialScreen = ({}: {}) => {
   return (
     <ScrollView>
-      <View className="flex-1 bg-dark-gray items-center h-full py-20 px-4">
+      <View className="flex-1 bg-dark-gray items-center h-full py-20 px-4 md:px-80">
         <StyledText>
           Hello, here are your components. For starters, this is the default
           text
@@ -212,7 +213,7 @@ const InitialScreen = ({}: {}) => {
           userAvatar="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
         <ProfileCard
-          className="mt-8"
+          className="hidden md:block mt-8"
           userName="Logan Davis"
           userPosition="UX designer"
           userLocation="Los Angeles Metropolitan Area"
@@ -225,7 +226,44 @@ const InitialScreen = ({}: {}) => {
           overallRating={4.5}
           userAvatar="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
-        <GiveReviewCard />
+        <GiveReviewCard className="hidden md:block mt-8" />
+        <SearchableConnectionsCard
+          className="mt-2"
+          users={[
+            {
+              firstName: "Ionel",
+              lastName: "Ionescu",
+              isVerified: true,
+              position: "Mint rubber",
+              avatar:
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            },
+            {
+              firstName: "Alex",
+              lastName: "Alexandrescu",
+              isVerified: true,
+              position: "Designer",
+              avatar:
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            },
+            {
+              firstName: "Gigi",
+              lastName: "Popescu",
+              isVerified: true,
+              position: "Mint rubber",
+              avatar:
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            },
+            {
+              firstName: "FIfi",
+              lastName: "Ionescu",
+              isVerified: true,
+              position: "Mint rubber",
+              avatar:
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            },
+          ]}
+        />
       </View>
     </ScrollView>
   );

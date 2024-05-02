@@ -66,7 +66,7 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
       {name == "search" && <SearchIcon />}
       {name == "arrow-down" && (
         <Octicons
-          size={20}
+          size={size}
           name="triangle-down"
           color={color ? colors[color] : colors["dark-grey"]}
         />

@@ -67,7 +67,7 @@ export const GiveReviewCard = ({ className }: GiveReviewCardProps) => {
                       Star Rating:
                     </StyledText>
                     <View className="flex-row justify-between">
-                      <View className="mr-2">
+                      <View className="mr-2 w-32">
                         <StyledText weight={600} color="darkgrey">
                           Professionalsim
                         </StyledText>
@@ -85,7 +85,7 @@ export const GiveReviewCard = ({ className }: GiveReviewCardProps) => {
                       </View>
                     </View>
                     <View className="flex-row justify-between my-4">
-                      <View className="mr-2 ">
+                      <View className="mr-2 w-32 ">
                         <StyledText weight={600} color="darkgrey">
                           Reliability
                         </StyledText>
@@ -104,7 +104,7 @@ export const GiveReviewCard = ({ className }: GiveReviewCardProps) => {
                     </View>
 
                     <View className="flex-row justify-between">
-                      <View className="mr-2">
+                      <View className="mr-2 w-32">
                         <StyledText weight={600} color="darkgrey">
                           Communication
                         </StyledText>
