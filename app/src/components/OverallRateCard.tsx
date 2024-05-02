@@ -2,6 +2,7 @@ import { View, ViewProps } from "react-native";
 import { Card } from "./Card";
 import { StyledText } from "./StyledText";
 import { CategoryRating } from "./CategoryRating";
+import { twMerge } from "tailwind-merge";
 
 export type OverallRateCardProps = {
   overallRating: number;
@@ -10,6 +11,7 @@ export type OverallRateCardProps = {
   reliabilityRating: number;
   communicationRating: number;
   className?: ViewProps["className"];
+  barsContainerClassName?: ViewProps["className"];
 };
 
 export const OverallRateCard = ({
@@ -19,6 +21,7 @@ export const OverallRateCard = ({
   professionalismRating,
   reliabilityRating,
   className,
+  barsContainerClassName,
 }: OverallRateCardProps) => {
   return (
     <Card
@@ -37,7 +40,7 @@ export const OverallRateCard = ({
               Overall Rate
             </StyledText>
           </View>
-          <View className="flex-grow">
+          <View className={twMerge("flex-grow", barsContainerClassName)}>
             <CategoryRating
               categoryName="Professionalsim"
               rating={professionalismRating}

@@ -47,7 +47,8 @@ export type IconName =
   | "plus"
   | "notifications"
   | "user"
-  | "settings";
+  | "settings"
+  | "eye";
 
 export type IconProps = {
   name: IconName;
@@ -164,6 +165,13 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
       {name === "settings" && (
         <Ionicons
           name="settings-outline"
+          size={size}
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
+      {name === "eye" && (
+        <MaterialCommunity
+          name="eye"
           size={size}
           color={color ? colors[color] : colors["black"]}
         />
