@@ -29,6 +29,18 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2ca593b6-2ecf-4a8b-a4f7-26362a7c8a21"
+      }
+    },
+    "owner": "culero",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/2ca593b6-2ecf-4a8b-a4f7-26362a7c8a21"
+    }
   }
 }
