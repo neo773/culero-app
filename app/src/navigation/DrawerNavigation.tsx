@@ -46,7 +46,7 @@ const DrawerHeader = ({
       </View>
 
       <View className={twMerge("xs: hidden md:block p-7", className)}>
-        <StyledText color="primary" xl4>
+        <StyledText color="primary" xl4 weight={700}>
           CULERO
         </StyledText>
       </View>
