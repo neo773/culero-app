@@ -8,6 +8,7 @@ import FontAwesome5Brands from "@expo/vector-icons/FontAwesome5";
 import MaterialCommunity from "@expo/vector-icons/MaterialCommunityIcons";
 import Material from "@expo/vector-icons/MaterialIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 import colors from "../../colors";
 import { twMerge } from "tailwind-merge";
@@ -20,6 +21,7 @@ import { GithubIcon } from "./GithubIcon";
 import { UserStarIcon } from "./UserStarIcon";
 import { UserGroupIcon } from "./UserGroupIcon";
 import { HomeIcon } from "./HomeIcon";
+import { UserIcon } from "./UserIcon";
 
 export type IconName =
   | "edit"
@@ -42,7 +44,10 @@ export type IconName =
   | "user-star"
   | "user-group"
   | "home"
-  | "plus";
+  | "plus"
+  | "notifications"
+  | "user"
+  | "settings";
 
 export type IconProps = {
   name: IconName;
@@ -114,7 +119,12 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
           color={color ? colors[color] : colors["black"]}
         />
       )}
-      {name == "review" && <ReviewIcon />}
+      {name == "review" && (
+        <ReviewIcon
+          size={size}
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
       {name == "instagram-color" && <InstaIcon />}
       {name == "linkedin-color" && <LinkedinIcon />}
       {name == "twitter-color" && <TwitterIcon />}
@@ -122,7 +132,12 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
       {name == "user-star" && (
         <UserStarIcon size={size} color={color ? colors[color] : undefined} />
       )}
-      {name == "user-group" && <UserGroupIcon />}
+      {name == "user-group" && (
+        <UserGroupIcon
+          size={size}
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
       {name == "home" && (
         <HomeIcon
           color={color ? colors[color] : colors["black"]}
@@ -133,6 +148,23 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
         <AntDesign
           size={size}
           name="pluscircle"
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
+      {name == "notifications" && (
+        <Ionicons
+          name="notifications-outline"
+          size={size}
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
+      {name === "user" && (
+        <UserIcon size={size} color={color ? colors[color] : colors["black"]} />
+      )}
+      {name === "settings" && (
+        <Ionicons
+          name="settings-outline"
+          size={size}
           color={color ? colors[color] : colors["black"]}
         />
       )}

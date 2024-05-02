@@ -8,6 +8,7 @@ export function BottomNavigator() {
   return (
     <Tab.Navigator
       screenOptions={{
+        headerShown: false,
         tabBarIconStyle: {},
         tabBarStyle: { height: 75, padding: 10, paddingBottom: 10 },
         tabBarLabelStyle: { fontFamily: "Inter_400Regular", color: "black" },
