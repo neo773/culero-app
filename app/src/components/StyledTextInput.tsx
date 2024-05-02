@@ -15,6 +15,7 @@ export const StyledTextInput = ({
   containerClassName,
   submitProps,
   leftIconProps,
+  style,
   ...props
 }: StyledTextInputProps) => {
   const [value, setValue] = useState<string>("");
@@ -30,11 +31,16 @@ export const StyledTextInput = ({
       <TextInput
         value={value}
         onChangeText={(newValue) => setValue(newValue)}
-        style={{
-          fontFamily: "Inter_400Regular",
-          flex: 1,
-          flexGrow: 1,
-        }}
+        style={[
+          {
+            fontFamily: "Inter_400Regular",
+            flex: 1,
+            flexGrow: 1,
+            //@ts-ignore
+            outlineStyle: "none",
+          },
+          style,
+        ]}
         {...props}
       />
       {!!submitProps && (

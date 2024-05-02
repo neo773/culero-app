@@ -48,7 +48,8 @@ export type IconName =
   | "notifications"
   | "user"
   | "settings"
-  | "eye";
+  | "eye"
+  | "checkmark";
 
 export type IconProps = {
   name: IconName;
@@ -172,6 +173,13 @@ export const Icon = ({ name, color, size, className }: IconProps) => {
       {name === "eye" && (
         <MaterialCommunity
           name="eye"
+          size={size}
+          color={color ? colors[color] : colors["black"]}
+        />
+      )}
+      {name === "checkmark" && (
+        <Ionicons
+          name="checkmark"
           size={size}
           color={color ? colors[color] : colors["black"]}
         />
