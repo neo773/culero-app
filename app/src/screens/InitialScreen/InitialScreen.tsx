@@ -23,8 +23,10 @@ import { PasswordStrength } from "../../components/PasswordStrength";
 import { ConnectionReviewCard } from "../../components/ConnectionsReviewCard";
 import { Icon } from "../../icons";
 import { SocialMediaCard } from "../../icons/SocialMediaCard";
+import { useNavigation } from "@react-navigation/native";
 
 const InitialScreen = ({}: {}) => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       <View className="flex-1 bg-dark-gray items-center h-full py-20 px-4">
@@ -32,6 +34,13 @@ const InitialScreen = ({}: {}) => {
           Hello, here are your components. For starters, this is the default
           text
         </StyledText>
+        <StyledPressable
+          onPress={() => {
+            navigation.navigate('LoginScreen');
+          }}
+        >
+          Go to Login Screen
+        </StyledPressable>
         <StyledText>Buttons:</StyledText>
         <StyledPressable
           onPress={() => {

@@ -24,6 +24,7 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined
   InitialScreen: undefined
   HomeScreen: undefined
+  LoginScreen: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
